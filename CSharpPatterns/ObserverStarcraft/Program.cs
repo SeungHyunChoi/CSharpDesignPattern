@@ -69,8 +69,7 @@ namespace ObserverStarcraft
 
         class Marine : Unit
         {
-            public Marine(string name, int health) 
-                : base(name, health)
+            public Marine(string name, int health) : base(name, health)
             {
             }
         }
@@ -86,8 +85,8 @@ namespace ObserverStarcraft
 
             public void Update(Unit _unit)
             {
-                this.unit = _unit;
-                Console.WriteLine("메인화면 {0} 상태 변경 : 체력 {1}", this.unit.Name, this.unit.Health.ToString());
+                unit = _unit;
+                Console.WriteLine("메인화면 {0} 상태 변경 : 체력 {1}", unit.Name, unit.Health.ToString());
             }
 
             public Unit Unit
@@ -124,6 +123,5 @@ namespace ObserverStarcraft
                 Console.WriteLine("적 상태창 {0} 상태 변경 : 체력 {1}", this.unit.Name, this.unit.Health.ToString()); 
             }
         }
-
     }
 }
