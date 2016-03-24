@@ -12,11 +12,11 @@ namespace ObserverPattern
         {
             ConcreteSubject s = new ConcreteSubject();
 
-            s.Attach(new ConcreteObserver(s, "X"));
-            s.Attach(new ConcreteObserver(s, "Y"));
-            s.Attach(new ConcreteObserver(s, "Z"));
+            s.AttachObserver(new ConcreteObserver(s, "X"));
+            s.AttachObserver(new ConcreteObserver(s, "Y"));
+            s.AttachObserver(new ConcreteObserver(s, "Z"));
 
-            s.SubjectState = "ABC";
+            s.SubjectState = "ABCD";
             s.Notify();
 
             Console.ReadKey();
@@ -30,7 +30,7 @@ namespace ObserverPattern
     {
         private List<Observer> _observer = new List<Observer>();
 
-        public void Attach(Observer observer)
+        public void AttachObserver(Observer observer)
         {
             _observer.Add(observer);
         }
